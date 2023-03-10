@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import AppFeatures from './Components/AppFeatures/AppFeatures';
+import featureData from './data';
+import Header from './Components/Header/Header'
+import MusicApp from './Components/MusicApp/MusicApp';
+import ProductAnalysis from './Components/Product-Analysis/ProductAnalysis.jsx';
+import FeaturesAnalysis from './Components/Features-Anlaysis/FeaturesAnalysis';
+import ServiceCard from './common-components/ServiceCard.jsx/ServiceCard';
+import Service from './Components/Services/Service';
+import Customers from './Components/Customers/Customers';
+import Download from './Components/Download/Download';
+import Footer from './Components/Footer/Footer';
 
 function App() {
+  const fun =()=>
+  {
+    console.log("hii",featureData)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <MusicApp/>
+      <AppFeatures/>
+      <ProductAnalysis/>
+      <FeaturesAnalysis/>
+      <Service/>
+      <Customers/>
+      <Download/>
+      <Footer/>
     </div>
   );
 }
